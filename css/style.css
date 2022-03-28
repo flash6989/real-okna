@@ -1,0 +1,440 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Futura New Book";
+  src: url("/fonts/FuturaNewBook-Reg.eot");
+  src: local("Futura New Book Reg"), local("FuturaNewBook-Reg"), url("/fonts/FuturaNewBook-Reg.woff2") format("woff2"), url("/fonts/FuturaNewBook-Reg.woff") format("woff"), url("/fonts/FuturaNewBook-Reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura New Demi";
+  src: url("/fonts/FuturaNewDemi-Reg.eot");
+  src: local("Futura New Demi Reg"), local("FuturaNewDemi-Reg"), url("/fonts/FuturaNewDemi-Reg.woff2") format("woff2"), url("/fonts/FuturaNewDemi-Reg.woff") format("woff"), url("/fonts/FuturaNewDemi-Reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura New";
+  src: url("/fonts/FuturaNewBold-Reg.eot");
+  src: local("Futura New Bold Reg"), local("FuturaNewBold-Reg"), url("/fonts/FuturaNewBold-Reg.woff2") format("woff2"), url("/fonts/FuturaNewBold-Reg.woff") format("woff"), url("/fonts/FuturaNewBold-Reg.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  max-width: 1440px;
+  font-size: 21px;
+  font-family: "Futura New Book";
+  margin: 0 auto;
+  color: #0d0d0d;
+}
+
+.header {
+  background: url("/images/header.png") no-repeat no-repeat, #0a345988;
+  padding-bottom: 10px;
+}
+
+.header__bar {
+  padding-top: 40px;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__barright {
+  font-size: 30px;
+  height: 30px;
+  display: flex;
+  gap: 60px;
+}
+.header__barright a {
+  color: #f2f2f2;
+  font-family: "Futura New";
+}
+
+.header__barbutton {
+  margin-left: 0px;
+  border-radius: 8px;
+  padding: 5px 12px;
+  background-color: #f20505;
+  font-size: 18px;
+  color: #f2f2f2;
+}
+
+.header__info {
+  margin: 50px auto 10px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.header__info h1 {
+  font-family: "Futura New";
+  color: #f2f2f2;
+  font-size: 54px;
+  max-width: 750px;
+}
+.header__info h1::before {
+  content: "";
+  border-bottom: 3px solid #f20505;
+  position: absolute;
+  width: 300px;
+  left: 5px;
+  top: 115px;
+}
+.header__info ul {
+  font-size: 30px;
+  padding-top: 60px;
+  font-family: "Futura New Demi";
+}
+.header__info ul h3 {
+  margin-bottom: 20px;
+}
+.header__info ul li {
+  margin-top: 20px;
+  color: #f2f2f2;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+.header__info ul li::before {
+  content: "—";
+  position: relative;
+  left: -5px;
+  bottom: 2px;
+}
+
+.header__buttonpadding {
+  margin-top: 30px;
+  padding: 25px 30px;
+  color: #f2f2f2;
+  font-size: 20px;
+  width: 400px;
+  font-family: "Futura New Book";
+  box-shadow: 0px 3px 3px rgba(10, 52, 89, 0.76);
+}
+
+.button {
+  border-radius: 25px;
+  background-color: #f20505;
+  text-align: center;
+}
+
+.service {
+  margin: 0 auto 40px auto;
+  position: relative;
+  max-width: 1200px;
+}
+.service h2 {
+  padding: 40px 0 20px 0;
+  text-align: center;
+  color: #0d0d0d;
+  font-size: 50px;
+  font-family: "Futura New";
+}
+
+.service__zagolovok {
+  margin-bottom: 30px;
+}
+.service__zagolovok div {
+  border-top: 3px solid red;
+  width: 230px;
+  margin: 0 auto;
+}
+
+.service__slideritem {
+  margin: 0 auto;
+  width: 450px;
+}
+.service__slideritem img {
+  width: 450px;
+  height: 600px;
+}
+
+.slider__info {
+  position: absolute;
+  padding: 0 40px 0 0;
+  width: 450px;
+  bottom: 74px;
+  background: rgba(10, 52, 89, 0.75);
+}
+.slider__info p {
+  color: #f2f2f2;
+  margin: 15px 0 10px 20px;
+  font-family: Futura New Demi;
+}
+.slider__info i {
+  margin-left: 20px;
+  font-size: 24px;
+  color: #f2f2f2;
+}
+
+.slider__infoheader h3 {
+  padding-top: 5px;
+  font-family: "Futura New Demi";
+  color: #f2f2f2;
+  font-size: 40px;
+  margin-left: 20px;
+}
+.slider__infoheader div {
+  margin-left: 20px;
+  border-top: 3px solid red;
+  width: 230px;
+  margin-bottom: 10px;
+}
+
+.service__button {
+  background: #0a3459;
+  border-radius: 0 0 10px 10px;
+  font-size: 24px;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 25px 0;
+  font-family: "Futura New Demi";
+}
+
+.service_sliders {
+  display: flex;
+  justify-content: center;
+}
+
+.service__slider {
+  margin-top: 30px;
+  position: relative;
+  z-index: 0;
+  opacity: 0.5;
+}
+.service__slider:hover::before {
+  content: url("/images/arrow-left.png");
+  position: absolute;
+  top: 240px;
+  left: 50px;
+  cursor: pointer;
+}
+
+.service__slider2 {
+  position: absolute;
+  z-index: 1;
+}
+
+.service__slider3 {
+  margin-top: 30px;
+  z-index: 0;
+  opacity: 0.5;
+  position: relative;
+}
+.service__slider3:hover::before {
+  content: url("/images/arrow-right.png");
+  position: absolute;
+  top: 240px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.service__slideritemtransparent {
+  margin: 0 auto;
+  width: 450px;
+}
+.service__slideritemtransparent img {
+  width: 450px;
+  height: 530px;
+}
+
+.slider__infotransparent {
+  position: absolute;
+  padding: 0 40px 0 0;
+  width: 450px;
+  bottom: 74px;
+  background: rgba(10, 52, 89, 0.75);
+}
+.slider__infotransparent p {
+  color: #f2f2f2;
+  margin: 15px 0 10px 20px;
+  font-family: Futura New Demi;
+}
+.slider__infotransparent i {
+  margin-left: 20px;
+  font-size: 24px;
+  color: #f2f2f2;
+}
+
+.request {
+  background: url("/images/measurer.png") no-repeat;
+  background-size: 70%;
+  background-position: right 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.request p {
+  color: #0a3459;
+  font-size: 30px;
+  font-family: "Futura New Demi";
+  margin-bottom: 15px;
+  margin-left: 25px;
+  max-width: 485px;
+}
+
+.request__zagolovok h2 {
+  max-width: 850px;
+  padding: 40px 0 30px 0;
+  color: #0d0d0d;
+  font-size: 50px;
+  font-family: "Futura New";
+}
+
+.request__info p {
+  position: relative;
+  padding-left: 2px;
+}
+.request__info p::before {
+  content: "i";
+  width: 20px;
+  height: 20px;
+  color: #2578c0cb;
+  text-align: center;
+  font-size: 18px;
+  position: absolute;
+  cursor: pointer;
+  left: -25px;
+  top: 3px;
+  border: 1px solid rgba(125, 137, 204, 0.603);
+  border-radius: 50%;
+}
+.request__info form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputtext {
+  padding: 20px 150px;
+  border: 1px;
+  width: 450px;
+  background: rgba(59, 31, 61, 0.07);
+  border: 1px solid rgba(175, 175, 175, 0.66);
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
+.inputtext::placeholder {
+  color: #a9a9a9;
+}
+
+.infoicon {
+  height: 18px;
+  font-size: 16px;
+  text-align: center;
+  color: #256dacd3;
+  display: block;
+  width: 18px;
+  border-radius: 50%;
+  border: 1px solid #68a5da7c;
+  margin-right: 10px;
+}
+
+.request__consent {
+  margin: 20px 0;
+  max-width: 500px;
+}
+.request__consent a {
+  color: #243afc;
+  text-decoration: underline;
+}
+.request__button {
+  margin-left: 90px;
+  max-width: 270px;
+  padding: 20px 0;
+  background: #f20505;
+  box-shadow: 0px 3px 3px rgba(110, 23, 151, 0.76);
+  color: #f2f2f2;
+  font-family: Futura New Demi;
+}
+
+/*# sourceMappingURL=style.css.map */
