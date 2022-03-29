@@ -4,31 +4,31 @@
   font-family: "Futura New Book";
   src: url("/fonts/FuturaNewBook-Reg.eot");
   src: local("Futura New Book Reg"), local("FuturaNewBook-Reg"),
-    url("/fonts/FuturaNewBook-Reg.woff2") format("woff2"),
-    url("/fonts/FuturaNewBook-Reg.woff") format("woff"),
-    url("/fonts/FuturaNewBook-Reg.ttf") format("truetype");
+    url("../fonts/FuturaNewBook-Reg.woff2") format("woff2"),
+    url("../fonts/FuturaNewBook-Reg.woff") format("woff"),
+    url("../fonts/FuturaNewBook-Reg.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Futura New Demi";
-  src: url("/fonts/FuturaNewDemi-Reg.eot");
+  src: url("../fonts/FuturaNewDemi-Reg.eot");
   src: local("Futura New Demi Reg"), local("FuturaNewDemi-Reg"),
-    url("/fonts/FuturaNewDemi-Reg.woff2") format("woff2"),
-    url("/fonts/FuturaNewDemi-Reg.woff") format("woff"),
-    url("/fonts/FuturaNewDemi-Reg.ttf") format("truetype");
+    url("../fonts/FuturaNewDemi-Reg.woff2") format("woff2"),
+    url("../fonts/FuturaNewDemi-Reg.woff") format("woff"),
+    url("../fonts/FuturaNewDemi-Reg.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Futura New";
-  src: url("/fonts/FuturaNewBold-Reg.eot");
+  src: url("../fonts/FuturaNewBold-Reg.eot");
   src: local("Futura New Bold Reg"), local("FuturaNewBold-Reg"),
-    url("/fonts/FuturaNewBold-Reg.woff2") format("woff2"),
-    url("/fonts/FuturaNewBold-Reg.woff") format("woff"),
-    url("/fonts/FuturaNewBold-Reg.ttf") format("truetype");
+    url("../fonts/FuturaNewBold-Reg.woff2") format("woff2"),
+    url("../fonts/FuturaNewBold-Reg.woff") format("woff"),
+    url("../fonts/FuturaNewBold-Reg.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -41,7 +41,8 @@ body {
 }
 
 .header {
-  background: url("/images/header.png") left -200px / cover no-repeat no-repeat #0a345988;
+  background: url("../images/header.png") left -200px / cover no-repeat no-repeat
+    #0a345988;
   padding-bottom: 10px;
 }
 .header__bar {
@@ -236,7 +237,7 @@ body {
   opacity: 0.5;
   &:hover {
     &::before {
-      content: url("/images/arrow-left.png");
+      content: url("../images/arrow-left.png");
       position: absolute;
       top: 240px;
       left: 50px;
@@ -256,7 +257,7 @@ body {
   position: relative;
   &:hover {
     &::before {
-      content: url("/images/arrow-right.png");
+      content: url("../images/arrow-right.png");
       position: absolute;
       top: 240px;
       right: 50px;
@@ -295,7 +296,7 @@ body {
 }
 
 .request {
-  background: url("/images/measurer.png") no-repeat;
+  background: url("../images/measurer.png") no-repeat;
   background-size: 75%;
   background-position: right 90px;
   max-width: 1200px;
@@ -398,7 +399,7 @@ body {
 }
 
 .installments {
-  background: url("/images/installment-fon.png") left top/100% no-repeat;
+  background: url("../images/installment-fon.png") left top/100% no-repeat;
 
   width: 100%;
   h2 {
@@ -443,7 +444,7 @@ body {
 }
 .empty {
   flex: 70%;
-  background: url("/images/Installments.png") 70px 0px no-repeat;
+  background: url("../images/Installments.png") 70px 0px no-repeat;
 }
 .installment__infoblock {
 }
@@ -489,7 +490,7 @@ body {
 }
 .advantages__empty {
   flex: 93%;
-  background: url("/images/advantages-fon.png") 0px 0px/95% no-repeat;
+  background: url("../images/advantages-fon.png") 0px 0px/95% no-repeat;
 }
 
 .advantages__points {
@@ -606,7 +607,7 @@ body {
 }
 
 .works {
-  background: url("/images/works-fon.png") 0px 0px / cover no-repeat;
+  background: url("../images/works-fon.png") 0px 0px / cover no-repeat;
   padding-bottom: 30px;
 }
 .works__zagolovok {
@@ -637,7 +638,7 @@ body {
     font-family: "Futura New Demi";
     position: relative;
     &::before {
-      content: url("/images/quote.png");
+      content: url("../images/quote.png");
       position: absolute;
       top: -20px;
       left: -35px;
