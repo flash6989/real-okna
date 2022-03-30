@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <title>ReaL Окна</title>
   </head>
@@ -40,7 +44,10 @@
         <div></div>
       </div>
       <div class="service__sliders">
-        <div class="service__slider no__activeleft">
+        <img class="arrow__left" src="./images/arrow-left.png" alt="" />
+        <img class="arrow__right" src="./images/arrow-right.png" alt="" />
+
+        <div class="service__slider no__activeright">
           <div class="service__slideritemtransparent">
             <img src="./images/slider1.png" alt="" />
             <div class="slider__infotransparent">
@@ -68,7 +75,7 @@
             <p class="service__button">Заказать услугу</p>
           </div>
         </div>
-        <div class="service__slider no__activeright">
+        <div class="service__slider no__activeleft">
           <div class="service__slideritemtransparent">
             <img src="./images/slider_two/works-slider2.jpg" alt="" />
             <div class="slider__infotransparent">
@@ -194,13 +201,29 @@
       </div>
 
       <div class="works__slider" id="works_slider">
-        <div class="works__bigfoto">
-          <img src="./images/slider_two/works-slider1.png" alt="" />
+        <div class="works__slidercontainer">
+          <div class="slider__items">
+            <div class="works__slideritem">
+              <img src="./images/slider_two/works-slider1.png" alt="" />
+            </div>
+            <div class="works__slideritem">
+              <img src="./images/slider_two/works-slider2.jpg" alt="" />
+            </div>
+            <div class="works__slideritem">
+              <img src="./images/slider_two/works-slider3.jpg" alt="" />
+            </div>
+            <div class="works__slideritem">
+              <img src="./images/slider_two/works-slider4.jpg" alt="" />
+            </div>
+          </div>
         </div>
-        <div class="works__smallfoto">
-          <img src="./images/slider_two/works-slider2.jpg" alt="" />
-          <img src="./images/slider_two/works-slider3.jpg" alt="" />
-          <img src="./images/slider_two/works-slider4.jpg" alt="" />
+        <div class="works__smallfotocontainer">
+          <div class="works__smallfoto">
+            <img src="./images/slider_two/works-slider1.png" alt="" />
+            <img src="./images/slider_two/works-slider2.jpg" alt="" />
+            <img src="./images/slider_two/works-slider3.jpg" alt="" />
+            <img src="./images/slider_two/works-slider4.jpg" alt="" />
+          </div>
         </div>
       </div>
     </div>
