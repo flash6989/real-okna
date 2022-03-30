@@ -6,11 +6,19 @@ const parentListService = document.querySelector(".service__sliders");
 const firstSliderItems = document.querySelectorAll(".service__slider");
 const arrowLeft = document.querySelector(".arrow__left");
 const arrowRight = document.querySelector(".arrow__right");
+const arrowTop = document.querySelector(".arrow__top");
+const arrowBottom = document.querySelector(".arrow__bottom");
+const buttonTopMap = document.querySelector(".button__topmap");
+const buttonBottomMap = document.querySelector(".button__bottommap");
+
 const sliderBlockTransform = document.querySelector(".slider__items");
+const sliderSmallBlockSwaper = document.querySelector(".works__smallfoto");
+const sliderMaps = document.querySelector(".footer__maps");
 
 let timeSleepTwoSlider = 4000;
 let intervalSlider1 = null;
 let intervalSlider2 = null;
+let intervalSlider3 = null;
 window.onload = function () {
   intervalSlider2 = setInterval(
     () => nextImg(sliderBlockTransform),
@@ -20,6 +28,11 @@ window.onload = function () {
   intervalSlider1 = setInterval(
     () => changeFirstSlider(firstSliderItems, parentListService),
     4000
+  );
+
+  intervalSlider3 = setInterval(
+    () => sliderMapsAuto(sliderMaps),
+    timeSleepTwoSlider < 4000 ? 4000 : timeSleepTwoSlider
   );
 };
 
@@ -70,6 +83,8 @@ function clickImgChange(event) {
   handleChangeImg();
 }
 
+function handlerScroll() {}
+
 function handleChangeImg() {
   clearInterval(intervalSlider2);
 
@@ -77,11 +92,65 @@ function handleChangeImg() {
   sliderBlockTransform.style.transform = `translateX(${-position + "px"})`;
 }
 
+let countSmall = 4;
+
+let positionSmall = 0;
+arrowTop.addEventListener("click", (event) => {
+  console.log("клик по Верхней стрелке");
+});
+
+arrowBottom.addEventListener("click", (event) => {
+  positionSmall += 100;
+  if (positionSmall > 170) positionSmall = 170;
+  sliderSmallBlockSwaper.style.transform = `translateY(${
+    -positionSmall + "px"
+  })`;
+  console.log("клик по нижней стрелке");
+});
+
+arrowTop.addEventListener("click", (event) => {
+  positionSmall -= 100;
+  if (positionSmall < 0) positionSmall = 0;
+  sliderSmallBlockSwaper.style.transform = `translateY(${
+    -positionSmall + "px"
+  })`;
+  console.log("клик по нижней стрелке");
+});
+
+let positionMapSlider = 0;
+
+buttonBottomMap.addEventListener("click", (event) => {
+  clearInterval(intervalSlider3);
+
+  positionMapSlider += 400;
+  if (positionMapSlider > 800) positionMapSlider = 0;
+  sliderMaps.style.transform = `translateY(${-positionMapSlider + "px"})`;
+  console.log("клик по нижней стрелке");
+});
+
+buttonTopMap.addEventListener("click", (event) => {
+  clearInterval(intervalSlider3);
+  positionMapSlider -= 400;
+  if (positionMapSlider < 0) positionMapSlider = 0;
+  sliderMaps.style.transform = `translateY(${-positionMapSlider + "px"})`;
+  console.log("клик по Верхней стрелке");
+});
+
 document
   .querySelector(".works__smallfoto")
   .addEventListener("click", (event) => clickImgChange(event));
 
 console.log(allImgSliderTwo);
+
+function sliderMapsAuto(sliderMaps) {
+  positionMapSlider += 400;
+  if (positionMapSlider > 800) positionMapSlider = 0;
+  sliderMaps.style.transform = `translateY(${-positionMapSlider + "px"})`;
+}
+
+sliderMaps.addEventListener("click", (event) => {
+  clearInterval(intervalSlider3);
+});
 
 function nextImg(sliderBlockTransform) {
   position += 660;
