@@ -454,7 +454,7 @@ body {
   font-size: 16px;
   padding: 20px 0;
   background: #f20505;
-  box-shadow: 0px 3px 3px rgba(110, 23, 151, 0.76);
+  box-shadow: 0px 2px 2px rgba(10, 52, 89, 0.76);
   color: #f2f2f2;
   font-family: Futura New Demi;
   cursor: pointer;
@@ -520,7 +520,7 @@ body {
   font-size: 16px;
 
   background: #f20505;
-  box-shadow: 0px 3px 3px rgba(110, 23, 151, 0.76);
+  box-shadow: 0px 2px 2px rgba(10, 52, 89, 0.76);
   color: #f2f2f2;
   text-transform: uppercase;
   cursor: pointer;
@@ -665,7 +665,7 @@ body {
   font-size: 16px;
   font-family: "Futura New Demi";
   background: #f20505;
-  box-shadow: 0px 3px 3px rgba(90, 16, 19, 0.76);
+  box-shadow: 0px 2px 2px rgba(10, 52, 89, 0.76);
   color: #f2f2f2;
   text-transform: uppercase;
   cursor: pointer;
@@ -998,6 +998,14 @@ body {
   color: white;
   left: 40%;
   top: 370px;
+}
+
+.button__bottommap:hover {
+  background: #272727;
+}
+
+.button__topmap:hover {
+  background: #272727;
 }
 
 .modal {
