@@ -855,15 +855,14 @@ body {
 }
 
 .footer__info {
-  width: 400px;
   margin: 0 auto;
-  font-size: 28px;
+  font-size: 22px;
   color: #f2f2f2;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .footer__button {
-  width: 42%;
+  width: 200px;
   padding: 18px 10px;
   margin: 0 auto;
 
@@ -975,30 +974,32 @@ body {
 
 .button__topmap {
   background: #474747;
-  width: 300px;
+  width: 60px;
+  height: 60px;
+
   text-align: center;
   position: absolute;
   padding: 6px 30px;
   color: white;
-  border-radius: 0px 0px 10px 10px;
+
   top: 0px;
-  left: 40%;
+  left: 5px;
   z-index: 2;
   cursor: pointer;
 }
 
 .button__bottommap {
   background: #474747;
-  width: 300px;
+  width: 60px;
+  height: 60px;
   text-align: center;
   cursor: pointer;
-  border-radius: 10px 10px 0 0;
   padding: 6px 30px;
   position: absolute;
   z-index: 2;
   color: white;
-  left: 40%;
-  top: 370px;
+  left: 5px;
+  top: 340px;
 }
 
 .button__bottommap:hover {
@@ -1136,14 +1137,6 @@ body {
 }
 
 @media (max-width: 1050px) {
-  .button__topmap {
-    left: 30%;
-  }
-
-  .button__bottommap {
-    left: 30%;
-  }
-
   .advantages__info {
     flex-direction: column-reverse;
     align-items: center;
@@ -1182,13 +1175,34 @@ body {
 }
 
 @media (max-width: 890px) {
-  .button__topmap {
-    left: 15%;
+  .footer__contacts {
+    width: 79%;
+    height: 35%;
+  }
+  .footer__zagolovok h2 {
+    padding-top: 0;
+    font-size: 25px;
+  }
+  .footer__zagolovok {
+    margin-bottom: 5px;
   }
 
-  .button__bottommap {
-    left: 15%;
+  .footer__contacts a {
+    margin-bottom: 5px;
   }
+  .footer__address {
+    margin-bottom: 0;
+  }
+  .footer__info {
+    font-size: 18px;
+  }
+
+  .footer__button {
+    display: none;
+    width: 26%;
+    padding: 10px 8px;
+  }
+
   .works__info {
     flex-direction: column;
   }
