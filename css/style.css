@@ -814,6 +814,7 @@ body {
   width: 30%;
   height: 100%;
   position: absolute;
+  border-radius: 0 0 0 50px;
   top: 0px;
   right: 0;
 }
@@ -981,14 +982,16 @@ body {
   position: absolute;
   padding: 6px 30px;
   color: white;
+  border-radius: 0 0px 20px 0;
 
   top: 0px;
-  left: 5px;
+  left: 0px;
   z-index: 2;
   cursor: pointer;
 }
 
 .button__bottommap {
+  border-radius: 0 20px 0 0;
   background: #474747;
   width: 60px;
   height: 60px;
@@ -998,7 +1001,7 @@ body {
   position: absolute;
   z-index: 2;
   color: white;
-  left: 5px;
+  left: 0px;
   top: 340px;
 }
 
