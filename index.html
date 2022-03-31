@@ -18,9 +18,7 @@
         <img src="./images/logo.png" alt="" />
         <div class="header__barright">
           <a href="tel:+79999999999">+7(999)999-99-99</a>
-          <p class="header__barbutton" onclick="openModal">
-            Рассчитать стоимость
-          </p>
+          <p class="header__barbutton button__modal">Рассчитать стоимость</p>
         </div>
       </div>
 
@@ -33,7 +31,9 @@
           <li>Более 25 лет на рынке</li>
           <li>Все работы ''под ключ''</li>
           <li>Скидки до 70%</li>
-          <p class="button header__buttonpadding">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</p>
+          <p class="button header__buttonpadding button__modal">
+            ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+          </p>
         </ul>
       </div>
     </header>
@@ -58,7 +58,7 @@
               <i>от 4799 руб./м2</i>
               <p>Самые ЛУЧШИЕ решения для вашего балкона / лоджии ПОД КЛЮЧ</p>
             </div>
-            <p class="service__button">Заказать услугу</p>
+            <p class="service__button button__modal">Заказать услугу</p>
           </div>
         </div>
         <div class="service__slider active__slider">
@@ -72,7 +72,7 @@
               <i>от 4799 руб./м2</i>
               <p>Самые ЛУЧШИЕ решения для вашего балкона / лоджии ПОД КЛЮЧ</p>
             </div>
-            <p class="service__button">Заказать услугу</p>
+            <p class="service__button button__modal">Заказать услугу</p>
           </div>
         </div>
         <div class="service__slider no__activeleft">
@@ -86,7 +86,7 @@
               <i>от 4799 руб./м2</i>
               <p>Самые ЛУЧШИЕ решения для вашего балкона / лоджии ПОД КЛЮЧ</p>
             </div>
-            <p class="service__button">Заказать услугу</p>
+            <p class="service__button button__modal">Заказать услугу</p>
           </div>
         </div>
       </div>
@@ -134,7 +134,12 @@
             нравится по-настоящему.
           </p>
 
-          <p class="button installment__button">Узнать подробности</p>
+          <p
+            class="button installment__button button__modal"
+            id="button__modal"
+          >
+            Узнать подробности
+          </p>
         </div>
       </div>
     </div>
@@ -241,7 +246,7 @@
               <a href="tel:+70000000000">+7(000)000-00-00</a>
               <p class="footer__address">Борисоглебск</p>
               <p class="footer__info">Консультации по телефону круглосуточно</p>
-              <p class="button footer__button">ОСТАВИТЬ ЗАЯВКУ</p>
+              <p class="button footer__button button__modal">ОСТАВИТЬ ЗАЯВКУ</p>
             </div>
           </div>
           <div class="footer__map">
@@ -260,7 +265,7 @@
               <a href="tel:+70000000000">+7(000)000-00-00</a>
               <p class="footer__address">Новохоперск</p>
               <p class="footer__info">Консультации по телефону круглосуточно</p>
-              <p class="button footer__button">ОСТАВИТЬ ЗАЯВКУ</p>
+              <p class="button footer__button button__modal">ОСТАВИТЬ ЗАЯВКУ</p>
             </div>
           </div>
           <div class="footer__map">
@@ -279,7 +284,7 @@
               <a href="tel:+70000000000">+7(000)000-00-00</a>
               <p class="footer__address">Поворино</p>
               <p class="footer__info">Консультации по телефону круглосуточно</p>
-              <p class="button footer__button">ОСТАВИТЬ ЗАЯВКУ</p>
+              <p class="button footer__button button__modal">ОСТАВИТЬ ЗАЯВКУ</p>
             </div>
           </div>
         </div>
@@ -296,7 +301,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal">
+    <div class="modal modal__hidden" id="modal">
       <div class="modal__content">
         <div class="modal__header">
           <h2>ЗАПОЛНИТЕ ФОРМУ</h2>
@@ -306,7 +311,7 @@
         <div class="modal__body">
           <form action="">
             <input type="text" placeholder="Ваше имя" class="inputtext" />
-            <input type="text" placeholder="Ваш телефон" class="inputtext" />
+            <input type="tel" placeholder="Ваш телефон" class="inputtext" />
 
             <textarea
               type="text"
@@ -316,7 +321,7 @@
 
             <input
               type="submit"
-              value="ЗАКАЗАТЬ УСЛУГИ"
+              value="ОТПРАВИТЬ ЗАЯВКУ"
               class="button advantages__button"
             />
           </form>

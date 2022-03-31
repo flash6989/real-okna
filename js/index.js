@@ -158,7 +158,7 @@ function nextImg(sliderBlockTransform) {
   sliderBlockTransform.style.transform = `translateX(${-position + "px"})`;
 }
 
-function changeFirstSlider(arrItems, parentListService) {
+function changeFirstSlider(arrItems) {
   arrItems.forEach((element) => {
     if (element.classList.contains("active__slider")) {
       element.classList.remove("active__slider");
@@ -177,7 +177,7 @@ function changeFirstSlider(arrItems, parentListService) {
   });
 }
 
-function changeFirstSliderLeft(arrItems, parentListService) {
+function changeFirstSliderLeft(arrItems) {
   arrItems.forEach((element) => {
     if (element.classList.contains("active__slider")) {
       element.classList.remove("active__slider");

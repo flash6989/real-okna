@@ -1009,8 +1009,6 @@ body {
 }
 
 .modal {
-  display: none;
-
   position: fixed;
   top: 0;
   width: 100%;
@@ -1032,6 +1030,20 @@ body {
   background: #072844;
   padding: 50px 30px;
   max-width: 570px;
+}
+
+.modal__hidden {
+  display: none;
+}
+
+.modal__body input {
+  color: white;
+}
+
+.modal__body textarea {
+  resize: none;
+  height: 150px;
+  color: white;
 }
 
 @keyframes animation_slider2 {
