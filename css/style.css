@@ -126,9 +126,10 @@ body {
 }
 
 .header {
-  background: url("../images/header.png") left -200px / cover no-repeat no-repeat
+  background: url("../images/header.png") left 0px / cover no-repeat no-repeat
     #0a345988;
   padding-bottom: 10px;
+  padding: 0 20px 10px 20px;
 }
 
 .header__bar {
@@ -172,20 +173,22 @@ body {
   justify-content: space-between;
   position: relative;
 }
+
+.header__info h1 > hr {
+  margin: 5px 0 0 5px;
+  width: 300px;
+  height: 3px;
+  background-color: #f20505;
+}
+
 .header__info h1 {
   font-family: "Futura New";
   color: #f2f2f2;
   font-size: 54px;
+  margin-right: 40px;
   max-width: 750px;
 }
-.header__info h1::before {
-  content: "";
-  border-bottom: 3px solid #f20505;
-  position: absolute;
-  width: 300px;
-  left: 5px;
-  top: 115px;
-}
+
 .header__info ul {
   font-size: 30px;
   padding-top: 60px;
@@ -213,6 +216,7 @@ body {
   color: #f2f2f2;
   font-family: "Futura New Demi";
   font-size: 18px;
+  display: inline-block;
   width: 400px;
   box-shadow: 1px 2px 2px rgba(10, 52, 89, 0.76);
   cursor: pointer;
@@ -1163,5 +1167,53 @@ body {
   100% {
     opacity: 0.5;
     transform: translateX(10px) scale(1);
+  }
+}
+
+@media (max-width: 1000px) {
+  .header__info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__info h1 {
+    margin-right: 0;
+    margin-top: 20px;
+    display: inline-block;
+    max-width: none;
+    text-align: center;
+  }
+
+  .header__info h1 > hr {
+    margin: 15px auto 0 auto;
+  }
+
+  .header__info ul {
+    max-width: 400px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .header__info ul h3 {
+  }
+  .header__info ul li {
+  }
+
+  .header__bar {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .header__barright {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .header__buttonpadding {
+    padding: 20px 0px;
+    max-width: 350px;
+    display: block;
+    margin: 0 auto;
   }
 }
