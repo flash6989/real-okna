@@ -366,11 +366,8 @@ body {
 }
 
 .request {
-  background: url("../images/measurer.png") no-repeat;
-  background-size: 70%;
-  background-position: right 90px;
   max-width: 1200px;
-  padding-bottom: 60px;
+  padding: 0 20px 60px 20px;
   margin: 0 auto 0px;
 }
 .request p {
@@ -469,7 +466,7 @@ body {
 }
 
 .installments {
-  background: url("../images/installment-fon.png") left top/100% no-repeat;
+  background: url("../images/installment-fon.png") left top/cover no-repeat;
   width: 100%;
 }
 .installments h2 {
@@ -509,11 +506,19 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .empty {
-  flex: 70%;
-  background: url("../images/Installments.png") 70px 0px no-repeat;
+  margin-left: 20px;
+  flex: 1;
+}
+
+.installment__infoblock {
+  margin-right: 20px;
+  margin-left: 20px;
+  min-width: 500px;
+  flex: 2;
 }
 
 .installment__button {
@@ -1077,6 +1082,38 @@ body {
   right: 100px;
 }
 
+.request__block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.request__info {
+  padding-bottom: 40px;
+}
+
+.request__right {
+  max-width: 643px;
+  object-position: bottom;
+}
+
+.request__right img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 890px) {
+  .installment__info {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
 @keyframes animation_slider2 {
   0% {
     opacity: 0.5;
@@ -1188,6 +1225,12 @@ body {
   }
   .service__sliders {
     width: 340px;
+  }
+}
+
+@media (max-width: 1195px) {
+  .request__zagolovok h2 {
+    margin: 0 auto;
   }
 }
 
