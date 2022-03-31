@@ -1170,6 +1170,27 @@ body {
   }
 }
 
+@media (max-width: 500px) {
+  .active__slider img {
+    height: 550px;
+  }
+  .service__slideritemtransparent {
+    width: 340px;
+  }
+  .service__slideritemtransparent img {
+    width: 340px;
+  }
+  .slider__infotransparent {
+    width: 340px;
+  }
+  .service__button {
+    width: 340px;
+  }
+  .service__sliders {
+    width: 340px;
+  }
+}
+
 @media (max-width: 1100px) {
   .service__sliders {
     max-width: 400px;
