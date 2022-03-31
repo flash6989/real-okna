@@ -160,18 +160,30 @@ function nextImg(sliderBlockTransform) {
 
 function changeFirstSlider(arrItems) {
   arrItems.forEach((element) => {
-    if (element.classList.contains("active__slider")) {
+    if (
+      element.classList.contains("active__slider") ||
+      element.classList.contains("active__sliderback")
+    ) {
       element.classList.remove("active__slider");
+      element.classList.remove("active__sliderback");
 
       return element.classList.add("no__activeleft");
     }
 
-    if (element.classList.contains("no__activeright")) {
+    if (
+      element.classList.contains("no__activeright") ||
+      element.classList.contains("no__activerightback")
+    ) {
       element.classList.remove("no__activeright");
+      element.classList.remove("no__activerightback");
       return element.classList.add("active__slider");
     }
-    if (element.classList.contains("no__activeleft")) {
+    if (
+      element.classList.contains("no__activeleft") ||
+      element.classList.contains("no__activeleftback")
+    ) {
       element.classList.remove("no__activeleft");
+      element.classList.remove("no__activeleftback");
       return element.classList.add("no__activeright");
     }
   });
@@ -179,25 +191,39 @@ function changeFirstSlider(arrItems) {
 
 function changeFirstSliderLeft(arrItems) {
   arrItems.forEach((element) => {
-    if (element.classList.contains("active__slider")) {
+    if (
+      element.classList.contains("active__slider") ||
+      element.classList.contains("active__sliderback")
+    ) {
       element.classList.remove("active__slider");
+      element.classList.remove("active__sliderback");
 
-      return element.classList.add("no__activeleft");
+      return element.classList.add("no__activerightback");
     }
 
-    if (element.classList.contains("no__activeright")) {
+    if (
+      element.classList.contains("no__activeright") ||
+      element.classList.contains("no__activerightback")
+    ) {
       element.classList.remove("no__activeright");
-      return element.classList.add("active__slider");
+      element.classList.remove("no__activerightback");
+
+      return element.classList.add("no__activeleftback");
     }
-    if (element.classList.contains("no__activeleft")) {
+    if (
+      element.classList.contains("no__activeleft") ||
+      element.classList.contains("no__activeleftback")
+    ) {
       element.classList.remove("no__activeleft");
-      return element.classList.add("no__activeright");
+      element.classList.remove("no__activeleftback");
+      return element.classList.add("active__sliderback");
     }
   });
 }
 
 arrowLeft.addEventListener("click", (event) => {
   clearInterval(intervalSlider1);
+  changeFirstSliderLeft(firstSliderItems);
 });
 
 arrowRight.addEventListener("click", (event) => {

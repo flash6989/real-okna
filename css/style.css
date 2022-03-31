@@ -900,16 +900,17 @@ body {
 
 /*# sourceMappingURL=style.css.map */
 
+.active__slider img {
+  object-fit: cover;
+  height: 600px;
+}
+
 .active__slider {
   position: absolute;
   opacity: 1;
   z-index: 1;
   top: -30px;
   animation: animation_slider2 0.6s ease-in;
-}
-.active__slider img {
-  object-fit: cover;
-  height: 600px;
 }
 
 .no__activeleft {
@@ -1046,10 +1047,52 @@ body {
   color: white;
 }
 
+.active__sliderback {
+  position: absolute;
+  opacity: 1;
+  z-index: 1;
+  top: -30px;
+  animation: animation_sliderback2 0.6s ease-in;
+}
+
+.active__sliderback img {
+  object-fit: cover;
+  height: 600px;
+}
+
+.no__activeleftback {
+  animation: animation_leftback 0.8s ease-in;
+  position: absolute;
+
+  left: 100px;
+}
+
+.no__activerightback {
+  animation: animation_rightback 0.8s ease-in;
+  position: absolute;
+  right: 100px;
+}
+
 @keyframes animation_slider2 {
   0% {
     opacity: 0.5;
     transform: translateX(290px) scale(0.9);
+  }
+
+  30% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes animation_sliderback2 {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-290px) scale(0.9);
   }
 
   30% {
@@ -1077,6 +1120,21 @@ body {
   }
 }
 
+@keyframes animation_leftback {
+  0% {
+    opacity: 0.5;
+    transform: translateX(580px) scale(1);
+  }
+  20% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: translateX(0px) scale(1);
+  }
+}
+
 @keyframes animation_right {
   0% {
     opacity: 0.5;
@@ -1086,5 +1144,24 @@ body {
   100% {
     opacity: 0.5;
     transform: translateX(0px);
+  }
+}
+
+@keyframes animation_rightback {
+  0% {
+    opacity: 1;
+    transform: translateX(-270px) scale(1.112);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateX(10px) scale(1);
   }
 }
