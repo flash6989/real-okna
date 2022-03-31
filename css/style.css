@@ -558,15 +558,6 @@ body {
   margin: 0 auto 60px auto;
 }
 
-.advantages__info {
-  display: flex;
-}
-
-.advantages__empty {
-  flex: 93%;
-  background: url("../images/advantages-fon.png") 0px 0px/95% no-repeat;
-}
-
 .advantages__points {
   max-height: 250px;
   display: flex;
@@ -1103,6 +1094,73 @@ body {
   height: 100%;
 }
 
+.advantages__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.advantages__empty {
+  flex: 1;
+}
+.advantages__infoblock {
+  flex: 1;
+  margin-right: 20px;
+}
+.advantages__empty img {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .inputtext {
+    width: 350px;
+  }
+  .request__info {
+    align-items: center;
+  }
+}
+
+@media (max-width: 580px) {
+  .advantages__points {
+    max-width: 440px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .advantages__info {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .advantages__points {
+    max-width: 500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .advantages form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .advantages__infoblock {
+    margin-right: 0;
+    margin-left: 0px;
+  }
+  .advantages__points {
+    margin-left: 70px;
+  }
+  .advantages__button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 509px) {
+  .advantages__points {
+    justify-content: center;
+    margin-bottom: 90px;
+  }
+}
+
 @media (max-width: 890px) {
   .installment__info {
     max-width: 1200px;
@@ -1111,6 +1169,10 @@ body {
     flex-wrap: wrap;
     flex-direction: column-reverse;
     align-items: center;
+  }
+
+  .installment__infoblock {
+    min-width: 350px;
   }
 }
 
