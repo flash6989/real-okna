@@ -777,7 +777,7 @@ body {
 .works__smallfoto img {
   border: 10px solid white;
   box-sizing: border-box;
-  width: 200px;
+  max-width: 200px;
   height: 144px;
   object-fit: cover;
 
@@ -1111,6 +1111,15 @@ body {
   width: 100%;
 }
 
+.request__info form {
+  align-items: center;
+}
+
+.request__button {
+  margin-left: 0;
+  padding: 20px 60px;
+}
+
 @media (max-width: 600px) {
   .inputtext {
     width: 350px;
@@ -1127,6 +1136,14 @@ body {
 }
 
 @media (max-width: 1050px) {
+  .button__topmap {
+    left: 30%;
+  }
+
+  .button__bottommap {
+    left: 30%;
+  }
+
   .advantages__info {
     flex-direction: column-reverse;
     align-items: center;
@@ -1159,9 +1176,34 @@ body {
     justify-content: center;
     margin-bottom: 90px;
   }
+  .request__zagolovok h2 {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 890px) {
+  .button__topmap {
+    left: 15%;
+  }
+
+  .button__bottommap {
+    left: 15%;
+  }
+  .works__info {
+    flex-direction: column;
+  }
+  .works__info p:nth-child(1) {
+    flex-basis: auto;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+
+  .works__info p:nth-child(2) {
+    flex-basis: auto;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+
   .installment__info {
     max-width: 1200px;
     margin: 0 auto;
