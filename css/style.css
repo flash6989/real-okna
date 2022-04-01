@@ -1355,6 +1355,14 @@ body {
 }
 
 @media (max-width: 550px) {
+  .works__smallfoto {
+    margin-left: 0;
+  }
+
+  .works__smallfoto img {
+    width: 150px;
+  }
+
   .active__slider img {
     height: 550px;
   }
@@ -1453,6 +1461,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: 0;
   }
   .arrow__top {
     display: none;
