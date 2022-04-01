@@ -1382,6 +1382,18 @@ body {
     width: 340px;
   }
 }
+@media (max-width: 450px) {
+  .works__smallfoto img {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 360px) {
+  .works__smallfoto img {
+    width: 100px;
+    height: 100px;
+  }
+}
 
 @media (max-width: 1195px) {
   .request__zagolovok h2 {
