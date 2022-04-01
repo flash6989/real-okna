@@ -777,7 +777,7 @@ body {
 .works__smallfoto img {
   border: 10px solid white;
   box-sizing: border-box;
-  max-width: 200px;
+  width: 200px;
   height: 144px;
   object-fit: cover;
 
@@ -794,17 +794,18 @@ body {
 .arrow__top {
   position: absolute;
   right: 125px;
-  top: 5px;
+  top: 6px;
   width: 40px;
   cursor: pointer;
+  z-index: 3;
 }
 
 .arrow__bottom {
+  z-index: 3;
   position: absolute;
-  bottom: 5px;
+  bottom: 6px;
   width: 40px;
   cursor: pointer;
-
   right: 125px;
 }
 
@@ -814,7 +815,7 @@ body {
   width: 30%;
   height: 100%;
   position: absolute;
-  border-radius: 0 0 0 50px;
+
   top: 0px;
   right: 0;
 }
@@ -959,7 +960,7 @@ body {
 }
 
 .works__smallfotocontainer {
-  overflow: hidden;
+  clip-path: inset(2px 2px);
   max-height: 440px;
 }
 
@@ -974,10 +975,19 @@ body {
 }
 
 .button__topmap {
-  background: #474747;
+  background: #385e73;
   width: 60px;
   height: 60px;
-
+  -webkit-clip-path: polygon(
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    0% 100%,
+    25% 50%,
+    0% 0%
+  );
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  transform: rotate(270deg);
   text-align: center;
   position: absolute;
   padding: 6px 30px;
@@ -985,14 +995,29 @@ body {
   border-radius: 0 0px 20px 0;
 
   top: 0px;
-  left: 0px;
+  left: 5px;
   z-index: 2;
   cursor: pointer;
 }
 
 .button__bottommap {
-  border-radius: 0 20px 0 0;
-  background: #474747;
+  -webkit-clip-path: polygon(
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    0% 100%,
+    25% 50%,
+    0% 0%
+  );
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  transform: rotate(-270deg);
+  text-align: center;
+  position: absolute;
+  padding: 6px 30px;
+  color: white;
+
+  background: #385e73;
+
   width: 60px;
   height: 60px;
   text-align: center;
@@ -1001,7 +1026,7 @@ body {
   position: absolute;
   z-index: 2;
   color: white;
-  left: 0px;
+  left: 5px;
   top: 340px;
 }
 
@@ -1179,6 +1204,7 @@ body {
 
 @media (max-width: 890px) {
   .footer__contacts {
+    border-radius: 0 0 0 50px;
     width: 79%;
     height: 35%;
   }
@@ -1412,6 +1438,32 @@ body {
       opacity: 1;
       transform: scale(1);
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .works__slider {
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 820px;
+  }
+
+  .works__smallfoto {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .arrow__top {
+    display: none;
+  }
+
+  .arrow__bottom {
+    display: none;
+  }
+
+  .works__smallfoto img {
+    max-width: 200px;
   }
 }
 

@@ -101,7 +101,8 @@ arrowTop.addEventListener("click", (event) => {
 
 arrowBottom.addEventListener("click", (event) => {
   positionSmall += 100;
-  if (positionSmall > 170) positionSmall = 170;
+  if (positionSmall > sliderSmallBlockSwaper.clientHeight - 300)
+    positionSmall = sliderSmallBlockSwaper.clientHeight - 300;
   sliderSmallBlockSwaper.style.transform = `translateY(${
     -positionSmall + "px"
   })`;
@@ -151,6 +152,8 @@ function sliderMapsAuto(sliderMaps) {
 sliderMaps.addEventListener("click", (event) => {
   clearInterval(intervalSlider3);
 });
+
+console.log(sliderSmallBlockSwaper.clientHeight);
 
 function nextImg(sliderBlockTransform) {
   position += 660;
